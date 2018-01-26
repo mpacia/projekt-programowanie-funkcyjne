@@ -1,15 +1,15 @@
 module Stack
-  ( Stack -- Stack data structure.
-  , empty   -- Creates empty Stack.
-  , isEmpty -- checks whether Stack is empty.
-  , push    -- push x s – put a value x on a top of a Stack s.
-  , top     -- top s – returns a value from a top of a Stack s.
-  , pop     -- pop s – returns a tuple consisting of a value from a top of a Stack s and the remaining part of a Stack s.
+  ( Stack -- | Stack data structure.
+  , empty   -- | Creates empty Stack.
+  , isEmpty -- | Checks whether Stack is empty.
+  , push    -- | push x s – put a value x on a top of a Stack s.
+  , top     -- | top s – returns a value from a top of a Stack s.
+  , pop     -- | pop s – returns a tuple consisting of a value from a top of a Stack s and the remaining part of a Stack s.
   , EmptyStackReadException -- | Thrown when reading from empty stack.
   ) where
 
 import Control.Exception
--- interface
+-- interface (signature, contract)
 empty :: Stack a
 isEmpty :: Stack a -> Bool
 push :: a -> Stack a -> Stack a
